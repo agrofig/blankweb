@@ -3,34 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Experimental Games</title>
+  <title>Game Portal</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="cloak.js"></script>
 </head>
 <body>
-  <h1>Games</h1>
-  <h3>By the way did you know that Samuel is stinky</h3>
-  <p>Here are our games</p>
+  <h1>🎮 Game Portal</h1>
+  <p>Choose a game to play:</p>
   <ul>
-    <li><a href="#" class="game-button" onclick="cloak('game1.html')">Game 1: thing</a></li>
-    <li><a href="#" class="game-button" onclick="cloak('game2.html')">Game 2: thing2</a></li>
-    <li><a href="#" class="game-button" onclick="cloak('game3.html')">Game 2: Hooda Math Embed</a></li>
-    <li><a href="#" class="game-button" onclick="cloak('game4.html')">Game 2: Hooda Math Embed</a></li>
+    <li><a href="#" class="game-button" onclick="cloak('https://agrofig.github.io/blankweb/games/game1.html')">Click Frenzy</a></li>
+    <li><a href="#" class="game-button" onclick="cloak('https://agrofig.github.io/blankweb/games/game2.html')">Escape Room</a></li>
+    <li><a href="#" class="game-button" onclick="cloak('https://agrofig.github.io/blankweb/games/game3.html')">Escape Room</a></li>
+    <li><a href="#" class="game-button" onclick="cloak('https://agrofig.github.io/blankweb/games/game4.html')">Escape Room</a></li>
   </ul>
-
-  <script>
-    function cloak(url) {
-      const win = window.open('about:blank', '_blank');
-      const iframe = win.document.createElement('iframe');
-      iframe.style.border = 'none';
-      iframe.style.width = '100vw';
-      iframe.style.height = '100vh';
-      iframe.src = url;
-      win.document.body.style.margin = '0';
-      win.document.body.style.padding = '0';
-      win.document.body.style.overflow = 'hidden';
-      win.document.body.appendChild(iframe);
-    }
-  </script>
 </body>
 </html>
 
