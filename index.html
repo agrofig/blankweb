@@ -3,17 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experimental Games</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <h1>Games</h1>
-  <h2>Also Samuel stinks</h2>
-  <p>These are our games</p>
+  <h3>By the way did you know that Samuel is stinky</h3>
+  <p>Here are our games</p>
   <ul>
-    <li><a href="games/game1.html" class="game-button">Game 1: Click Frenzy</a></li>
-    <li><a href="games/game2.html" class="game-button">Game 2: Hooda Math Embed</a></li>
+    <li><a href="#" class="game-button" onclick="cloak('https://agrofig.github.io/blankweb/games/game1.html')">Game 1: Click Frenzy</a></li>
+    <li><a href="#" class="game-button" onclick="cloak('https://agrofig.github.io/blankweb/games/game2.html')">Game 2: Hooda Math Embed</a></li>
   </ul>
-  <script src="script.js"></script>
+
+  <script>
+    function cloak(url) {
+      const win = window.open('about:blank', '_blank');
+      const iframe = win.document.createElement('iframe');
+      iframe.style.border = 'none';
+      iframe.style.width = '100vw';
+      iframe.style.height = '100vh';
+      iframe.src = url;
+      win.document.body.style.margin = '0';
+      win.document.body.style.padding = '0';
+      win.document.body.style.overflow = 'hidden';
+      win.document.body.appendChild(iframe);
+    }
+  </script>
 </body>
 </html>
+
 
